@@ -66,7 +66,7 @@ header h1 {
 nav {
     display: inherit;
     align-items: center;
-    border-top: 1px solid var(--dark-forwground-color);
+    border-top: 1px solid var(--dark-foreground-color);
     border-bottom: 1px solid var(--dark-foreground-color);
     height: 40px;
 }
@@ -121,4 +121,35 @@ footer {
 
 footer p {
     color: var(--light-foreground-color);
+}
+
+@media only screen and (max-width: 1200px) {
+    div#content {
+        flex-direction: column;
+    }
+
+    div#content section {
+        width: 100vw;
+        flex-direction: row;
+    }
+
+    div#content aside {
+        width: 100vw;
+        padding-top: var(--general-padding);
+        padding-left: calc(var(--general-padding) / 2);
+    }
+
+    article {
+        flex: 50%;
+    }
+
+    article div img {
+        height: 350px;
+    }
+}
+
+@media only screen and (max-width: 920px) {
+    div#content section {
+        flex-direction: column;
+    }
 }
